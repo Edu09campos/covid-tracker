@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Cards() {
+function Cards({data}) {
+    console.log(data);
+
     return (
         <h1>
             Cards
