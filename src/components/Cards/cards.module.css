@@ -16,3 +16,9 @@
 .deaths {
     border-bottom: 10px solid rgba(34, 34, 34, 0.8);
 }
+
+@media only screen and (max-width: 960px) {
+    .container {
+        padding: 0 15px;
+    }
+}

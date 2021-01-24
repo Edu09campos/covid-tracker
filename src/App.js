@@ -28,13 +28,15 @@ export default class App extends Component {
         const {data, country} = this.state; 
 
         return (
-            <div className={styles.container}>
-                <img className={styles.image} src={image} alt="Covid-19"/>
-                <Cards data={data}/>
-                <CountryPicker handleCountryChange={this.handleCountryChange}/>
-                <Chart data={data} country={country}/>
+            <>
+                <div className={styles.container}>
+                    <img className={styles.image} src={image} alt="Covid-19"/>
+                    <Cards data={data}/>
+                    <CountryPicker handleCountryChange={this.handleCountryChange}/>
+                    <Chart data={data} country={country}/>
+                </div>
                 <Footer/>
-            </div>
+            </>
         )
     }
 }
