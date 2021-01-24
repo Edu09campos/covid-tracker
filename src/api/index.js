@@ -35,7 +35,16 @@ export const fetchDailyRate = async () => {
             date: dailyData.reportDate,
         }))
 
-        return customData;
+
+        let finalData = [];
+        customData.forEach((day) => {
+            let date = new Date(day.date)
+            if(date.getDay() === 0){
+                finalData.push(day)
+            }
+        })
+
+        return finalData;
 
     } catch (error) {
         console.log(error);
