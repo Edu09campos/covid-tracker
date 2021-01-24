@@ -1,0 +1,21 @@
+.footer{
+    width: 100%;
+    margin-top: 80px;
+    background-color: #222222;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.notes {
+    padding-top: 10px;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+.bottom {
+    padding-bottom: 10px;
+}
