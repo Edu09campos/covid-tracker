@@ -19,9 +19,15 @@ export default class App extends Component {
     }
 
     handleCountryChange = async (country) => {
-        const data = await fetchData(country);
-
-        this.setState({data, country});
+        let data;
+        if(country === "Global"){
+            data = await fetchData("");
+            this.setState({data, country: ""});
+        }
+        else {
+            data = await fetchData(country);
+            this.setState({data, country});
+        }
     }
 
     render() {

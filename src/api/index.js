@@ -55,7 +55,11 @@ export const fetchCountries = async () => {
     try {
         const {data: {countries}} = await axios.get(`${url}/countries`);
 
-        return countries.map((country) => country.name);
+        let customCountries = countries.map((country) => ({name: country.name, iso: country.iso2}));
+
+        customCountries.unshift({name: "Global"});
+
+        return customCountries;
     } catch (error) {
         console.log(error);
     }
