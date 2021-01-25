@@ -9,7 +9,7 @@ export default function Footer() {
     return (
         <footer className={styles.footer}>
             <Typography className={styles.notes}>Made with <FaHeart color="#61dbfb"/> by Eduardo Campos.</Typography>
-            <Typography variant="caption" className={cx(styles.notes, styles.bottom)}>Thanks to Adrian from JavaScript Mastery!</Typography>
+            <Typography variant="caption" style={{color: "#aaaaaa"}} className={cx(styles.notes, styles.bottom)}>Thanks to Adrian from JavaScript Mastery!</Typography>
         </footer>
     )
 }
