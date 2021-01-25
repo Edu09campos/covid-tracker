@@ -1,15 +1,23 @@
 import React from 'react';
-import {Grid} from '@material-ui/core';
+import {Grid, Typography} from '@material-ui/core';
 
 import CardComponent from './Card/card';
 import styles from './cards.module.css';
 
-function Cards({data: {confirmed, recovered, deaths, lastUpdate}}) {
+function Cards({data: {confirmed, recovered, deaths, lastUpdate}, country}) {
     if(!confirmed) {
         return 'Loading...'
     }
+
+    const title = (
+        country
+        ? <Typography gutterBottom variant="h4">Covid-19 status in <span style={{fontWeight:  "bold"}}>{country}</span></Typography> 
+        : <Typography gutterBottom variant="h4">Covid-19 status <span style={{fontWeight: 'bold'}}>globally</span></Typography>
+    )
+
     return (
         <div className={styles.container}>
+            {title}
             <Grid container spacing={3} justify="center">
                 <CardComponent
                     className={styles.infected}
