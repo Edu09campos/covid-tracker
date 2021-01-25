@@ -27,8 +27,8 @@ function Chart({data: {confirmed, recovered, deaths}, country}) {
                     fill: true
                 }, {
                     data: dailyData.map(({deaths}) => deaths),
-                    label: 'Infected',
-                    borderColor: '#rgba(34,34,34,0.5)',
+                    label: 'Deaths',
+                    borderColor: 'rgba(10,10,10, 0.8)',
                     fill: true 
                 }]
             }}
