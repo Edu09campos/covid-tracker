@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Typography, Card, CardContent } from "@material-ui/core";
+import { Card, CardContent } from "@material-ui/core";
 import "leaflet/dist/leaflet.css";
 
 import {
@@ -14,7 +14,6 @@ import styles from "./App.module.css";
 import { fetchData } from "./api";
 
 export default function App() {
-  const [country, setCountry] = useState("");
   const [info, setInfo] = useState({});
   const [mapCenter, setMapCenter] = useState({ lat: 34.80746, lng: -40.4796 });
   const [mapZoom, setMapZoom] = useState(3);
@@ -29,12 +28,6 @@ export default function App() {
   }, []);
 
   const handleCountryChange = async (countryName) => {
-    if (countryName === "Global") {
-      setCountry("");
-    } else {
-      setCountry(countryName);
-    }
-
     let data = await fetchData(countryName);
     setInfo(data);
 

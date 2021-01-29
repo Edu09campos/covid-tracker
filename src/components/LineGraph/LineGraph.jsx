@@ -51,12 +51,6 @@ const options = {
   },
 };
 
-const casesTypeColors = {
-  cases: "#cc1034",
-  recovered: "#7dd71d",
-  deaths: "#ff6c47",
-};
-
 export default function LineGraph({ casesType }) {
   const [data, setData] = useState({});
 
