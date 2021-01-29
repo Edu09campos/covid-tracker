@@ -1,9 +1,0 @@
-.card {
-    margin: 0 2% !important;
-  }
-  @media only screen and (max-width: 960px) {
-    .card {
-      margin: 2% 0 !important;
-      padding: 2% 0 !important;
-    }
-  }

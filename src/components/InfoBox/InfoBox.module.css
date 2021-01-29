@@ -1,0 +1,62 @@
+.infoBox {
+  border-top: 10px solid lightgray;
+  flex: 1;
+  cursor: pointer;
+}
+
+.infoBox:hover {
+  transform: translateY(-10px);
+}
+
+.selected {
+  border-top: 10px solid blue;
+}
+
+.infoBox:not(:last-child) {
+  margin-right: 15px;
+}
+
+.green {
+  color: green;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.quantity {
+  color: #cc1034;
+  font-weight: 600;
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.total {
+  color: #6c757d;
+  font-weight: 700 !important;
+  font-size: 1rem !important;
+  margin-top: 5px !important;
+}
+
+.cases {
+  border-bottom: 10px solid rgba(255, 0, 0, 0.8);
+}
+
+.recovered {
+  border-bottom: 10px solid rgba(0, 255, 0, 0.8);
+}
+
+.deaths {
+  border-bottom: 10px solid rgba(34, 34, 34, 0.8);
+}
+
+@media only screen and (max-width: 630px) {
+  .infoBox:not(:first-child) {
+    margin-top: 20px;
+  }
+
+  .infoBox {
+    margin-right: 0 !important;
+    width: 80%;
+    align-self: center;
+  }
+}

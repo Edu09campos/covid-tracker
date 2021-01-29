@@ -1,0 +1,9 @@
+.graph {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.title {
+  font-weight: bold !important;
+  margin-top: 10px !important;
+}

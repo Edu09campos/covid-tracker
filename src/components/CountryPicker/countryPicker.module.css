@@ -1,10 +1,11 @@
 .formControl {
-    width: 35%;
-    margin-bottom: 30px !important;
+  background-color: white;
+  width: 30%;
 }
 
-@media only screen and (max-width: 770px) {
-    .formControl {
-        width: 80%;
-    }
+@media only screen and (max-width: 710px) {
+  .formControl {
+    margin: 15px 0 !important;
+    width: 75%;
+  }
 }
