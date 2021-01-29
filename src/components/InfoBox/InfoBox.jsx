@@ -39,10 +39,10 @@ export default function InfoBox({
           variant="h5"
           className={title === "Recovered" ? styles.green : styles.quantity}
         >
-          {prettyPrintStat(cases)}
+          {prettyPrintStat(cases, true)}
         </Typography>
         <Typography color="textSecondary" className={styles.total}>
-          Total: {prettyPrintStat(total)}
+          Total: {prettyPrintStat(total, false)}
         </Typography>
         <Typography color="textSecondary">
           {new Date(updated).toDateString()}
